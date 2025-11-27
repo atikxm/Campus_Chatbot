@@ -1,0 +1,274 @@
+{
+  "categories": [
+    {
+      "name": "admissions",
+      "questions": [
+        {
+          "patterns": [
+            "admission",
+            "admission process",
+            "how to apply",
+            "admission requirements"
+          ],
+          "responses": [
+            "The admission process involves online application submission, document verification, and fee payment. You can apply through our official website or visit the admission office."
+          ]
+        },
+        {
+          "patterns": [
+            "eligibility",
+            "qualification",
+            "criteria"
+          ],
+          "responses": [
+            "Eligibility criteria vary by program. For undergraduate courses, you need 10+2 with minimum 50% marks. For postgraduate courses, a relevant bachelor's degree is required."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fees",
+      "questions": [
+        {
+          "patterns": [
+            "fee",
+            "fees",
+            "course fee",
+            "tuition fee",
+            "fee structure"
+          ],
+          "responses": [
+            "Course fees vary by program. B.Tech fee is approximately ₹85,000 per semester, MBA is ₹75,000 per semester. For detailed fee structure, please visit the fees section on our website."
+          ]
+        },
+        {
+          "patterns": [
+            "scholarship",
+            "financial aid",
+            "fee concession"
+          ],
+          "responses": [
+            "Yes, we offer various scholarships based on merit and financial need. You can apply for scholarships through the scholarship portal available on our website."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "academics",
+      "questions": [
+        {
+          "patterns": [
+            "course",
+            "program",
+            "courses offered",
+            "programs"
+          ],
+          "responses": [
+            "We offer various programs in Engineering, Management, Pharmacy, Nursing, Agriculture, and Allied Sciences. You can find the complete list on our academic programs page."
+          ]
+        },
+        {
+          "patterns": [
+            "semester",
+            "academic calendar",
+            "schedule"
+          ],
+          "responses": [
+            "The academic year is divided into two semesters: Odd (July-Dec) and Even (Jan-June). The detailed academic calendar is available on the university portal."
+          ]
+        },
+        {
+          "patterns": [
+            "Exam hall"
+          ],
+          "responses": [
+            "Sure! Here are your Exam Hall details:\n\n🏢 Hall: Central Block – 3rd Floor\n\n🪑 Seat No: B-32\n\n🧭 Directions: Click here to open map\n\n📄 Admit Card: Download PDF\n\n🗓️ Your Next Exam: 25 February – Data Structures"
+          ]
+        },
+        {
+          "patterns": [
+            "Holiday"
+          ],
+          "responses": [
+            "This month, the campus will be closed for 5 days:\n5th Nov – Diwali Holiday\n12th Nov – Guru Nanak Jayanti\n18th Nov – Saturday (Weekly Off)\n19th Nov – Sunday (Weekly Off)\n25th Nov – Special Holiday"
+          ]
+        },
+        {
+          "patterns": [
+            "Exam date"
+          ],
+          "responses": [
+            "Data Structures – 25th Nov, 10:00 AM, Exam Hall B\nComputer Networks – 28th Nov, 2:00 PM, Exam Hall C\nOperating Systems – 30th Nov, 10:00 AM, Exam Hall A"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "campus",
+      "questions": [
+        {
+          "patterns": [
+            "library",
+            "library timing",
+            "library hours"
+          ],
+          "responses": [
+            "The central library is open from 8:00 AM to 8:00 PM on weekdays and 9:00 AM to 5:00 PM on Saturdays. It remains closed on Sundays and public holidays."
+          ]
+        },
+        {
+          "patterns": [
+            "hostel",
+            "accommodation",
+            "hostel facility"
+          ],
+          "responses": [
+            "We provide separate hostel facilities for boys and girls with modern amenities. Hostel admission is based on availability and requires separate application."
+          ]
+        },
+        {
+          "patterns": [
+            "lab",
+            "laboratory",
+            "computer lab"
+          ],
+          "responses": [
+            "We have state-of-the-art laboratories for each department including computer labs, engineering labs, pharmacy labs, and research facilities."
+          ]
+        },
+        {
+          "patterns": [
+            "Where is my classroom?",
+            "What is my next exam?",
+            "Can I download my admit card?",
+            "Which companies are coming for placement?",
+            "What is today’s canteen menu?",
+            "Is there a bus coming soon?",
+            "How can I report a problem?",
+            "Can I get reminders for exams or assignments?",
+            "Can I ask questions in my language?",
+            "How do I see my personal info?",
+            "Show exam hall details",
+            "Show placement drive details",
+            "Show library timings",
+            "Show hostel rules",
+            "Show course timetable",
+            "Show lab schedule",
+            "Show faculty contact info",
+            "Show sports events",
+            "Show campus map",
+            "Show upcoming events"
+          ],
+          "responses": [
+            "Your class is in Block A, Room 204., Your next exam is Data Structures on 25th November at 10:00 AM in Exam Hall B – Seat 17., Yes! You can download it here: [Download Admit Card PDF]., Upcoming placement drives: TCS – 5th December, Wipro – 12th December, Amazon – 20th December., Today’s canteen menu: Rice & Dal, Chicken Curry, Mixed Veg. Price range: ₹40–₹120., Bus #12 is 5 minutes away from the main gate. Next bus at 10:30 AM., You can report issues like electricity, plumbing, or furniture here: [Report Issue Form]., Yes! You will receive smart notifications for upcoming exams, deadlines, and events., You can chat in English, Hindi, or Assamese, and also use voice commands., Log in with your roll number and view your profile, attendance, and academic info here., Exam Hall B – 3rd Floor, Seat 17., Upcoming placement drives with company names and dates., Library is open from 8:00 AM to 8:00 PM., Hostel rules: No visitors after 9 PM, maintain cleanliness, follow curfew timings., Course timetable is available here: [Timetable Link]., Lab schedule: Monday to Friday, 9:00 AM – 5:00 PM., Faculty contact info: Email and phone numbers are available on the portal., Sports events: Football – 5th Dec, Basketball – 7th Dec, Badminton – 10th Dec., Here’s the interactive campus map: [Map Link]., Upcoming events: Tech Fest – 15th Dec, Cultural Fest – 20th Dec.\n"
+          ]
+        },
+        {
+          "patterns": [
+            "campus facilites"
+          ],
+          "responses": [
+            "A futuristic campus uses smart technologies and AI tools to make student life easier, safer, and more efficient. It includes features like smart navigation, exam notifications, placement updates, canteen menus, bus tracking, and problem reporting. Students can interact with the campus system via chatbots, voice commands, and mobile apps. This approach improves communication, accessibility, and overall campus experience, creating a modern, connected, and intelligent university environment."
+          ]
+        },
+        {
+          "patterns": [
+            "Campus Facilites"
+          ],
+          "responses": [
+            "Our campus offers a range of modern facilities to support students’ academic and personal growth:\n\nSmart Classrooms & Labs – Fully equipped with computers, projectors, and Wi-Fi.\n\nLibrary & Study Spaces – Digital and physical resources for research and learning.\n\nHostel & Dining – Comfortable accommodation and healthy meals with canteen services.\n\nTransport & Parking – Campus buses, bike parking, and shuttle services.\n\nSports & Recreation – Grounds, gym, indoor/outdoor sports, and cultural activity spaces.\n\nHealthcare & Safety – Medical assistance, first-aid, and security services.\n\nThese facilities aim to create a convenient, safe, and productive campus environment for students and staff."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contact",
+      "questions": [
+        {
+          "patterns": [
+            "contact",
+            "phone",
+            "email",
+            "address",
+            "location"
+          ],
+          "responses": [
+            "You can contact us at: Phone: +91-361-1234567, Email: info@adtu.in, Address: Gandhi Nagar, Panikhaiti, Guwahati, Assam 781026"
+          ]
+        },
+        {
+          "patterns": [
+            "admission office",
+            "admission contact"
+          ],
+          "responses": [
+            "Admission Office Contact: Phone: +91-361-1234568, Email: admission@adtu.in. Office hours: 9:30 AM to 5:00 PM (Monday to Friday)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "greetings",
+      "questions": [
+        {
+          "patterns": [
+            "hello",
+            "hi",
+            "hey",
+            "good morning",
+            "good afternoon"
+          ],
+          "responses": [
+            "Hello! Welcome to ADTU Smart Campus Chatbot. How can I assist you today?"
+          ]
+        },
+        {
+          "patterns": [
+            "thank you",
+            "thanks",
+            "thankyou"
+          ],
+          "responses": [
+            "You're welcome! Is there anything else I can help you with?"
+          ]
+        },
+        {
+          "patterns": [
+            "bye",
+            "goodbye",
+            "see you"
+          ],
+          "responses": [
+            "Goodbye! Have a great day. Feel free to reach out if you have more questions."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "courses",
+      "questions": [
+        {
+          "patterns": [
+            "CSE course fees"
+          ],
+          "responses": [
+            "Course fees vary by program. B.Tech fee is approximately ₹85,000 per semester, MBA is ₹75,000 per semester. For detailed fee structure, please visit the fees section on our website."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "placement",
+      "questions": [
+        {
+          "patterns": [
+            "Placements"
+          ],
+          "responses": [
+            "ADTU Placement Cell Information\n\n🎯 Placement Success Rate: 90%+\n\n🤝 Top Recruiters: Amazon, TCS, Cognizant, Wipro, Capgemini, Infosys, BYJU’S\n\n🎓 Eligibility: Minimum 6.0 CGPA & no active backlogs\n\n📝 Placement Registration: Click to Register\n\n📅 Upcoming Drives:\n\nHCL – 15 March\n\nWipro – 22 March\n\nTCS NQT – 5 April\n\n📞 Placement Office Contact: +91-XXXXXXXXXX"
+          ]
+        }
+      ]
+    }
+  ]
+}

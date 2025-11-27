@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADTU - Smart Campus AI Assistant | Assam Down Town University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-image">
+                            <img src="{{ url_for('static', filename='images/adtu-logo.png') }}" alt="ADTU Logo" onerror="this.style.display='none'">
+                            <div class="logo-fallback">
+                            </div>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Assam Down Town University</h1>
+                            <p>Smart Campus AI Assistant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-info">
+                    <div class="info-badge">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Est. 2010</span>
+                    </div>
+                    <button class="admin-btn" onclick="openAdminPanel()">
+                        <i class="fas fa-shield-alt"></i>
+                        Admin Panel
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-card glass-card">
+                    <div class="welcome-header">
+                        <div class="ai-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="welcome-text">
+                            <h2>Welcome to ADTU AI Assistant</h2>
+                            <p>Your Intelligent Campus Companion</p>
+                        </div>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Admissions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-book"></i>
+                            <span>Courses</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span>Fees & Scholarships</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-building"></i>
+                            <span>Campus Info</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Placements</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Contact</span>
+                        </div>
+                    </div>
+
+                    <div class="live-stats">
+                        <div class="stat">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h3>5000+</h3>
+                                <p>Questions Answered</p>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>24/7</h3>
+                                <p>Available</p>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h3>0.8s</h3>
+                                <p>Avg Response</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <div class="chat-container glass-card">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <div class="bot-profile">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="profile-info">
+                                <h3>ADTU AI Assistant</h3>
+                                <div class="status">
+                                    <span class="dot"></span>
+                                    <span>Online - Ready to help</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-controls">
+                            <button class="control-btn" onclick="clearChat()" title="Clear Chat">
+                                <i class="fas fa-broom"></i>
+                            </button>
+                            <button class="control-btn" onclick="toggleTheme()" title="Toggle Theme">
+                                <i class="fas fa-palette"></i>
+                            </button>
+                            <button class="control-btn" onclick="downloadChat()" title="Download Chat">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Welcome to <strong>Assam Down Town University's</strong> AI Assistant! I can help you with:</p>
+                                <ul>
+                                    <li>🎓 Admission process & eligibility</li>
+                                    <li>📚 Courses & fee structure</li>
+                                    <li>🏫 Campus facilities & hostels</li>
+                                    <li>💼 Placement opportunities</li>
+                                    <li>📞 Contact information</li>
+                                </ul>
+                                <p>What would you like to know today?</p>
+                                <span class="timestamp" id="initialTime"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <div class="section-title">
+                            <i class="fas fa-bolt"></i>
+                            Quick Questions
+                        </div>
+                        <div class="action-grid">
+                            <button class="action-btn" onclick="quickQuestion('admission process 2026')">
+                                <i class="fas fa-user-graduate"></i>
+                                Admission 2026
+                            </button>
+                            <button class="action-btn" onclick="quickQuestion('engineering courses fee structure')">
+                                <i class="fas fa-rupee-sign"></i>
+                                Course Fees
+                            </button>
+                            <button class="action-btn" onclick="quickQuestion('campus facilities and hostel')">
+                                <i class="fas fa-building"></i>
+                                Campus Facilities
+                            </button>
+                            <button class="action-btn" onclick="quickQuestion('placement companies and packages')">
+                                <i class="fas fa-briefcase"></i>
+                                Placements
+                            </button>
+                            <button class="action-btn" onclick="quickQuestion('exam hall building room number')">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Exam Halls
+                            </button>
+                            <button class="action-btn" onclick="quickQuestion('contact number and address')">
+                                <i class="fas fa-phone"></i>
+                                Contact Info
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="input-section">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <div class="input-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <input type="text" id="userInput" 
+                                       placeholder="Ask about admissions, courses, fees, campus, placements..." 
+                                       onkeypress="handleKeyPress(event)">
+                                <button class="send-btn" onclick="sendMessage()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-hint">
+                            <i class="fas fa-lightbulb"></i>
+                            Try: "What are the computer science eligibility criteria?" or "Tell me about hostel facilities"
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Assam Down Town University</h4>
+                    <p>Gandhi Nagar, Panikhaiti, Guwahati, Assam 781026</p>
+                </div>
+                <div class="footer-section">
+                    <p><i class="fas fa-phone"></i> +91-361-22334455</p>
+                    <p><i class="fas fa-envelope"></i> info@adtu.in</p>
+                    <p><i class="fas fa-globe"></i> www.adtu.in</p>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; 2010 ADTU. All rights reserved.</p>
+                    <p>Smart Campus Initiative - AI Powered Education</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal-backdrop" id="adminModal">
+        <div class="modal-container">
+            <div class="admin-panel glass-card">
+                <div class="admin-header">
+                    <h3><i class="fas fa-shield-alt"></i> ADTU Admin Login</h3>
+                    <button class="close-btn" onclick="closeAdminPanel()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Login Form -->
+                <div class="login-form-container" id="loginForm">
+                    <div class="form-header">
+                        <i class="fas fa-lock"></i>
+                        <h4>Admin Authentication Required</h4>
+                        <p>Enter your credentials to access the admin panel</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adminUsername">Username</label>
+                        <input type="text" id="adminUsername" placeholder="Enter admin username" 
+                               onkeypress="if(event.key=='Enter') adminLogin()">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" placeholder="Enter admin password"
+                               onkeypress="if(event.key=='Enter') adminLogin()">
+                    </div>
+                    
+                    <button class="submit-btn" onclick="adminLogin()">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login to Admin Panel
+                    </button>
+                    
+                    <div class="demo-credentials">
+                        <p><strong>Demo Credentials:</strong></p>
+                        <p>Username: <code>adtuadmin</code></p>
+                        <p>Password: <code>admin123</code></p>
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard (Hidden until login) -->
+                <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+                    <div class="dashboard-header">
+                        <h4><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h4>
+                        <button class="logout-btn" onclick="adminLogout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+
+                    <div class="admin-tabs">
+                        <button class="tab-btn active" onclick="switchAdminTab('manage')">
+                            <i class="fas fa-database"></i> Manage Knowledge
+                        </button>
+                        <button class="tab-btn" onclick="switchAdminTab('analytics')">
+                            <i class="fas fa-chart-bar"></i> Analytics
+                        </button>
+                    </div>
+
+                    <!-- Manage Knowledge Tab -->
+                    <div class="tab-content active" id="manageTab">
+                        <div class="section-header">
+                            <h5><i class="fas fa-plus-circle"></i> Add New Question</h5>
+                        </div>
+                        
+                        <div class="add-question-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select id="questionCategory">
+                                        <option value="admissions">Admissions</option>
+                                        <option value="courses">Courses</option>
+                                        <option value="fees">Fees & Scholarships</option>
+                                        <option value="campus">Campus Facilities</option>
+                                        <option value="placement">Placements</option>
+                                        <option value="contact">Contact Information</option>
+                                        <option value="academics">Academics</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Question Patterns (comma separated)</label>
+                                <input type="text" id="questionPatterns" 
+                                       placeholder="exam schedule, time table, exam dates">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Answer</label>
+                                <textarea id="questionAnswer" rows="4" 
+                                          placeholder="Enter detailed answer..."></textarea>
+                            </div>
+                            
+                            <button class="submit-btn" onclick="addNewQuestion()">
+                                <i class="fas fa-plus-circle"></i>
+                                Add to Knowledge Base
+                            </button>
+                        </div>
+
+                        <div class="knowledge-stats">
+                            <div class="stat-card">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <h3 id="totalQuestions">0</h3>
+                                    <p>Total Questions</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-layer-group"></i>
+                                <div>
+                                    <h3 id="totalCategories">0</h3>
+                                    <p>Categories</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Tab -->
+                    <div class="tab-content" id="analyticsTab">
+                        <div class="analytics-section">
+                            <div class="section-header">
+                                <h5><i class="fas fa-chart-bar"></i> System Analytics</h5>
+                            </div>
+                            
+                            <div class="analytics-grid">
+                                <div class="analytic-card">
+                                    <i class="fas fa-comments"></i>
+                                    <div class="analytic-info">
+                                        <h3 id="analyticsTotalQuestions">0</h3>
+                                        <p>Total Questions Asked</p>
+                                    </div>
+                                </div>
+                                <div class="analytic-card">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="analytic-info">
+                                        <h3 id="analyticsSuccessRate">95%</h3>
+                                        <p>Success Rate</p>
+                                    </div>
+                                </div>
+                                <div class="analytic-card">
+                                    <i class="fas fa-clock"></i>
+                                    <div class="analytic-info">
+                                        <h3 id="analyticsResponseTime">0.8s</h3>
+                                        <p>Avg Response Time</p>
+                                    </div>
+                                </div>
+                                <div class="analytic-card">
+                                    <i class="fas fa-database"></i>
+                                    <div class="analytic-info">
+                                        <h3 id="analyticsKnowledgeBase">0</h3>
+                                        <p>Knowledge Items</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Loading Animation -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="ai-thinking">
+                <div class="brain-animation">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>ADTU AI is Thinking</h3>
+                <p id="loadingMessage">Processing your question...</p>
+                <div class="thinking-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
